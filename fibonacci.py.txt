@@ -1,0 +1,13 @@
+numero = int(input("Digite um número: "))
+
+fibonacci = [0, 1]
+i = 1
+
+while fibonacci[i] < numero:
+    i += 1
+    fibonacci.append(fibonacci[i-1] + fibonacci[i-2])
+
+if fibonacci[i] == numero:
+    print(numero, "pertence à sequência de Fibonacci.")
+else:
+    print(numero, "não pertence à sequência de Fibonacci.")

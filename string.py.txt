@@ -1,0 +1,19 @@
+
+ # Define a string a ser invertida
+string_original = 'exemplo'
+
+# Converte a string para uma lista de caracteres
+lista_caracteres = list(string_original)
+
+# Inverte a ordem dos caracteres na lista
+tamanho_string = len(string_original)
+for i in range(tamanho_string // 2):
+    temp = lista_caracteres[i]
+    lista_caracteres[i] = lista_caracteres[tamanho_string - i - 1]
+    lista_caracteres[tamanho_string - i - 1] = temp
+
+# Converte a lista de caracteres de volta para uma string
+string_invertida = ''.join(lista_caracteres)
+
+# Exibe a string invertida na tela
+print(string_invertida)
